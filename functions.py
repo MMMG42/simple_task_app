@@ -1,4 +1,4 @@
-FILEPATH = 'lista_activitati/store.txt'
+FILEPATH = "store.txt"
 
 def get_todos(cale_fisier=FILEPATH):
     with open(cale_fisier, "r") as file_local:
@@ -11,4 +11,4 @@ def write_todos(todos_arg, cale_fisier=FILEPATH):
 
 
 if __name__ == "__main__":
-    print("hello!")
+    print(get_todos())

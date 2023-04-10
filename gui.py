@@ -1,9 +1,15 @@
 import functions
 import PySimpleGUI as sg
 import time
+import os
+
+if not os.path.exists("store.txt"):
+    with open("store.txt", "w") as file:
+        pass
+
 
 sg.theme("DarkPurple4")
- 
+
 ceas = sg.Text('', key = 'ceas')
 label = sg.Text("Introdu o activitate!")
 input_box = sg.InputText(tooltip="Introdu o activitate!", key = "activitate")
@@ -13,7 +19,6 @@ list_box = sg.Listbox(values = functions.get_todos(), key = "activitati",
 edit_button = sg.Button("Editeaza")
 complete_button = sg.Button("Indeplinit")
 exit_button = sg.Button("Iesire")
- 
 
 layout = [[ceas],
           [label], 

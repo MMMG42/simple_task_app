@@ -1,4 +1,4 @@
-import lista_activitati.functions as functions
+import functions
 import time
 
 data_cur = time.strftime('%b %d, %Y %H:%M:%S')
